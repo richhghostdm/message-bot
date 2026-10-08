@@ -26,6 +26,7 @@ async def forward_to_admin(update: Update, context: ContextTypes.DEFAULT_TYPE):
             text=info
         )
 
+        await update.message.reply_text("✅ Your message has been received and forwarded to the admin.")
         await context.bot.copy_message(
             chat_id=ADMIN_ID,
             from_chat_id=update.effective_chat.id,
